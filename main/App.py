@@ -14,7 +14,7 @@ class MyApp(wx.App):
 
         self.frame = MyFrame()
         #self.frame.SetBackgroundColour(wx.BLUE)
-        #self.flame.SetTitle("Image Archive client")
+        self.frame.SetTitle("Image Archive client")
         self.SetTopWindow(self.frame)
         self.frame.Show()
         return True

@@ -5,12 +5,15 @@ Created on Jul 11, 2013
 '''
 import wx
 
-#from patent.patentspage import PatentsCtrl
+from import_image.importpage import ImportImageCtrl
+from export_image.exportpage import ExportImageCtrl
+from checkin_image.checkinpage import CheckinImageCtrl
+from checkout_image.checkoutpage import CheckoutImageCtrl
 #from gps.gpspage import GPCtrl
 #from appointment.appointmentspage import AppointmentsCtrl
-#from equipment.equipmentpage import EquipmentCtrl
+#from exportpage import EquipmentCtrl
 #from patent.currentpatentpage import CurrentPatentCtrl
-#from finance.financepage import FinanceCtrl
+#from import.importpage import FinanceCtrl
 #from treatment.treatmentpage import TreatmentsCtrl
 #from cpd.cpdpage import CPDCtrl
 
@@ -20,20 +23,13 @@ class MainPane(wx.Notebook):
         super(MainPane, self).__init__(parent, style=wx.NB_TOP)
 
 
-        #self.currentPatentCtrl = CurrentPatentCtrl(self)
-        #self.patentsCtrl = PatentsCtrl(self)
-        #self.appointmentsCtrl = AppointmentsCtrl(self)
-        #self.treatmentsCtrl = TreatmentsCtrl(self)
-        #self.gpCtrl = GPCtrl(self)
-        #self.equipmentCtrl = EquipmentCtrl(self)
-        #self.financeCtrl = FinanceCtrl(self)
-        #self.cpdCtrl = CPDCtrl(self)
+        self.importImageCtrl = ImportImageCtrl(self)
+        self.exportImageCtrl = ExportImageCtrl(self)
+        self.checkinImageCtrl = CheckinImageCtrl(self)
+        self.checkoutImageCtrl = CheckoutImageCtrl(self)
         
-        #self.AddPage(self.currentPatentCtrl, "Patent")
-        #self.AddPage(self.appointmentsCtrl, "Appointments")
-        #self.AddPage(self.patentsCtrl, "Patents List")
-        #self.AddPage(self.treatmentsCtrl, "Treatments")
-        #self.AddPage(self.gpCtrl, "GPs")
-        #self.AddPage(self.equipmentCtrl, "Equipment")
-        #self.AddPage(self.financeCtrl, "Finance")
-        #self.AddPage(self.cpdCtrl, "C.P.D.")
+        self.AddPage(self.importImageCtrl, "Import")
+        self.AddPage(self.exportImageCtrl, "Export")
+        self.AddPage(self.checkinImageCtrl, "Check-in")
+        self.AddPage(self.checkoutImageCtrl, "Check-out")
+        
