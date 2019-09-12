@@ -9,6 +9,8 @@ from import_image.importpage import ImportImageCtrl
 from export_image.exportpage import ExportImageCtrl
 from checkin_image.checkinpage import CheckinImageCtrl
 from checkout_image.checkoutpage import CheckoutImageCtrl
+from view_image.viewpage import ViewImageCtrl
+from metadata_image.metadatapage import MetedataCtrl
 #from gps.gpspage import GPCtrl
 #from appointment.appointmentspage import AppointmentsCtrl
 #from exportpage import EquipmentCtrl
@@ -27,9 +29,12 @@ class MainPane(wx.Notebook):
         self.exportImageCtrl = ExportImageCtrl(self)
         self.checkinImageCtrl = CheckinImageCtrl(self)
         self.checkoutImageCtrl = CheckoutImageCtrl(self)
+        self.viewImageCtrl = ViewImageCtrl(self)
+        self.metedataCtrl = MetedataCtrl(self)
         
         self.AddPage(self.importImageCtrl, "Import")
         self.AddPage(self.exportImageCtrl, "Export")
         self.AddPage(self.checkinImageCtrl, "Check-in")
         self.AddPage(self.checkoutImageCtrl, "Check-out")
-        
+        self.AddPage(self.viewImageCtrl, "View")
+        self.AddPage(self.metedataCtrl, "Metadata")

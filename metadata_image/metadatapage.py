@@ -14,10 +14,10 @@ from datetime import timedelta
 import wx.lib.scrolledpanel as scrolledpanel
 #from access.patent import PatentTable
 
-class CheckinImageCtrl(scrolledpanel.ScrolledPanel):
-    pageName = "Check-in Page"
+class MetedataCtrl(scrolledpanel.ScrolledPanel):
+    pageName = "Metadata Page"
     def __init__(self, parent, style=wx.TAB_TRAVERSAL):
-        super(CheckinImageCtrl, self).__init__(parent, style=style)
+        super(MetedataCtrl, self).__init__(parent, style=style)
         
 
         #patentTable = PatentTable()
@@ -30,7 +30,7 @@ class CheckinImageCtrl(scrolledpanel.ScrolledPanel):
 
     def __DoLayout(self):
 
-        title_lbl= wx.StaticText(self, label="Check-in Images")
+        title_lbl= wx.StaticText(self, label="Apply metadata to Images")
         font = wx.Font(10, wx.SWISS, wx.NORMAL, wx.NORMAL)
         title_lbl.SetFont(font)
 
@@ -73,8 +73,8 @@ class MainPane(wx.Notebook):
     def __init__(self, parent):
         super(MainPane, self).__init__(parent, style=wx.NB_LEFT)
 
-        self.checkinImageCtrl = CheckinImageCtrl(self)
-        self.AddPage(self.checkinImageCtrl, "Finance")
+        self.checkinImageCtrl = MetedataCtrl(self)
+        self.AddPage(self.MetedataCtrl, "Apply metadata to Images")
 
 
 class TestApp(wx.App):

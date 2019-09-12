@@ -7,7 +7,6 @@ Created on Sep 2, 2013
 from xml.dom import minidom
 from xmlutils import XmlUtils
 
-
 class ConfigReader:
     
     _single = None
